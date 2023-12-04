@@ -6,7 +6,7 @@
     "services/*"
   ],
   "scripts": {
-    "start": "concurrently \"cd services/admin && npm start\" \"cd services/blog && npm start\" \"cd services/host && npm start\""
+    "start": "concurrently \"npm run start -w admin\" \"npm run start -w blog\" \"npm run start -w host\"" 
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
