@@ -1,15 +1,16 @@
 import { App } from "@/components/App";
-import { Admin } from "@/pages/About";
+import { Admin } from "@/pages/Admin";
 import { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
+import { adminRoutes } from "@packages/shared/src/routes/adminRoutes";
 
 const routes = [
   {
-    path: "/admin",
+    path: adminRoutes.admin,
     element: <App />,
     children: [
       {
-        path: "/admin",
+        path: adminRoutes.admin,
         element: (
           <Suspense fallback={"LOADING"}>
             <Admin />

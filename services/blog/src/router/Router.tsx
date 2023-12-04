@@ -2,6 +2,7 @@ import { App } from "@/components/App";
 import { Blog } from "@/pages/Blog";
 import { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
+import { blogRoutes } from "@packages/shared/src/routes/blogRoutes";
 
 const routes = [
   {
@@ -9,7 +10,7 @@ const routes = [
     element: <App />,
     children: [
       {
-        path: "/blog/main",
+        path: blogRoutes.main,
         element: (
           <Suspense fallback={"LOADING"}>
             <Blog />
@@ -17,7 +18,7 @@ const routes = [
         ),
       },
       {
-        path: "/blog/nested",
+        path: blogRoutes.nested,
         element: (
           <Suspense fallback={"LOADING"}>
             <div style={{ color: "blue" }}>NESTED</div>

@@ -1,10 +1,11 @@
+import { blogRoutes } from "@packages/shared/src/routes/blogRoutes";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
     <>
       <h1>Blog</h1>
-      <Link to="/blog/nested">NESTED</Link>
+      <Link to={blogRoutes.nested}>NESTED</Link>
     </>
   );
 };

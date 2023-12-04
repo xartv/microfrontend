@@ -4,5 +4,11 @@
   "workspaces": [
     "packages/*",
     "services/*"
-  ]
+  ],
+  "scripts": {
+    "start": "concurrently \"cd services/admin && npm start\" \"cd services/blog && npm start\" \"cd services/host && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
