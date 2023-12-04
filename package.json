@@ -6,9 +6,13 @@
     "services/*"
   ],
   "scripts": {
-    "start": "concurrently \"npm run start -w admin\" \"npm run start -w blog\" \"npm run start -w host\"" 
+    "start": "concurrently \"npm run start -w admin\" \"npm run start -w blog\" \"npm run start -w host\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "react-redux": "^9.0.0"
   }
 }

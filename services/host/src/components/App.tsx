@@ -1,17 +1,18 @@
 import { useState } from "react";
-import classes from "./App.module.scss";
 import { Link, Outlet } from "react-router-dom";
 import { adminRoutes } from "@packages/shared/src/routes/adminRoutes";
 import { blogRoutes } from "@packages/shared/src/routes/blogRoutes";
+import { useAppSelector } from "@packages/shared/src/store/store";
+import { getCount } from "@packages/shared/src/store/selectors/getCount";
 
 export const App = () => {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => setCount((prev) => prev + 1);
+  const count = useAppSelector(getCount);
 
   return (
-    <div data-testid="App.DataTestId">
-      <h1>PAGE</h1>
+    <div>
+      <h1>HOST</h1>
+      <br />
+      <div>HOST COUNTER: {count}</div>
       <Link to={adminRoutes.admin}>Admin</Link>
       <br />
       <Link to={blogRoutes.main}>Blog</Link>

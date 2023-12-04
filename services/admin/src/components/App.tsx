@@ -9,7 +9,7 @@ export const App = () => {
 
   return (
     <div>
-      <h1>ADMIN MODULE</h1>
+      <h1>Admin microfrontend</h1>
 
       <Outlet />
     </div>
